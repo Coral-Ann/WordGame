@@ -1,10 +1,14 @@
+using NUnit.Framework;
+using WordGame;
+
 namespace WordGame.Tests;
 
-public class WordGameTests
+public class GameTests
 {
     [Test]
-    public void Test1()
+    public void Game_GetWordToGuess_ReturnsWordToGuess()
     {
-        Assert.Pass();
+        Game game = new Game();
+        Assert.AreEqual("B_____", game.GetWordToGuess());
     }
 }
