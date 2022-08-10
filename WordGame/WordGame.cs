@@ -7,10 +7,13 @@ namespace WordGame;
 public class Game
 { 
   string wordToGuess;
+  int attemptsLeft;
   public Game(string word)
   {
     wordToGuess = word;
+    attemptsLeft = 10;
   }
+
   public string GetWordToGuess()
   {
     StringBuilder hint = new StringBuilder();
@@ -24,5 +27,10 @@ public class Game
       }
     }
     return hint.ToString();
+  }
+
+  public int GetRemainingAttempts()
+  {
+    return attemptsLeft;
   }
 }
