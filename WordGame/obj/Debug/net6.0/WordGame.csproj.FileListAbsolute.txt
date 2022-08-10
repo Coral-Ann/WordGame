@@ -1,0 +1,15 @@
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/bin/Debug/net6.0/WordGame
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/bin/Debug/net6.0/WordGame.deps.json
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/bin/Debug/net6.0/WordGame.runtimeconfig.json
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/bin/Debug/net6.0/WordGame.dll
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/bin/Debug/net6.0/WordGame.pdb
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/obj/Debug/net6.0/WordGame.csproj.AssemblyReference.cache
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/obj/Debug/net6.0/WordGame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/obj/Debug/net6.0/WordGame.AssemblyInfoInputs.cache
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/obj/Debug/net6.0/WordGame.AssemblyInfo.cs
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/obj/Debug/net6.0/WordGame.csproj.CoreCompileInputs.cache
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/obj/Debug/net6.0/WordGame.dll
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/obj/Debug/net6.0/refint/WordGame.dll
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/obj/Debug/net6.0/WordGame.pdb
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/obj/Debug/net6.0/WordGame.genruntimeconfig.cache
+/Users/coral-ann/Dropbox/Projects/LBStraining/week01/wordgame/WordGame/obj/Debug/net6.0/ref/WordGame.dll
