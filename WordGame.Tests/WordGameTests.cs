@@ -26,5 +26,4 @@ public class GameTests
 
         Assert.AreEqual(actual, expected); // Assert
     }
-
 }
