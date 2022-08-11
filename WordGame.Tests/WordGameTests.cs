@@ -30,4 +30,47 @@ public class GameTests
 
         Assert.That(actual, Is.EqualTo(expected)); // Assert
     }
+
+    [Test]
+    public void Game_GuessLetter_ReturnsTrueIfCharInWord()
+    {
+        WordChoser mockWordChoser = Substitute.For<WordChoser>(); // Arange
+        mockWordChoser.GetRandomFromDictionary().Returns("MAKERS");
+        Game game = new Game(mockWordChoser);
+        game.GetWordToGuess();
+
+        bool actual = game.GuessLetter('A'); // Act
+        bool expected = true;
+
+        Assert.That(actual, Is.EqualTo(expected)); // Assert        
+    }
+
+    [Test]
+    public void Game_GuessLetter_ReturnsFalseIfLetterUsed()
+    {
+        WordChoser mockWordChoser = Substitute.For<WordChoser>(); // Arange
+        mockWordChoser.GetRandomFromDictionary().Returns("MAKERS");
+        Game game = new Game(mockWordChoser);
+        game.GetWordToGuess();
+        game.GuessLetter('A');
+
+        bool actual = game.GuessLetter('A'); // Act
+        bool expected = false;
+
+        Assert.That(actual, Is.EqualTo(expected)); // Assert        
+    }
+
+    [Test]
+        public void Game_GuessLetter_ReturnsFalseIfWrongLetter()
+    {
+        WordChoser mockWordChoser = Substitute.For<WordChoser>(); // Arange
+        mockWordChoser.GetRandomFromDictionary().Returns("MAKERS");
+        Game game = new Game(mockWordChoser);
+        game.GetWordToGuess();
+
+        bool actual = game.GuessLetter('B'); // Act
+        bool expected = false;
+
+        Assert.That(actual, Is.EqualTo(expected)); // Assert 
+    }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using System.Collections.Generic;
 
 namespace WordGame;
 
@@ -8,11 +9,13 @@ public class Game
 { 
   int attemptsLeft;
   string wordToGuess;
+  List<Char> guessedLetters;
 
   public Game(WordChoser word)
   {
     wordToGuess = word.GetRandomFromDictionary();
     attemptsLeft = 10;
+    guessedLetters = new List<Char>();
   }
 
   public string GetWordToGuess()
@@ -33,5 +36,19 @@ public class Game
   public int GetRemainingAttempts()
   {
     return attemptsLeft;
+  }
+
+  public bool GuessLetter(char letter)
+  {
+    if (wordToGuess.Contains(letter) && !guessedLetters.Contains(letter))
+    {
+      guessedLetters.Add(letter);
+      return true;
+    } else if (wordToGuess.Contains(letter) && guessedLetters.Contains(letter)) {
+      return false;
+    } else {
+      attemptsLeft--;
+      return false;
+    }
   }
 }
