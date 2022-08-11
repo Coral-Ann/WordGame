@@ -32,6 +32,21 @@ public class GameTests
     }
 
     [Test]
+    public void Game_GetRemainingAttempts_ReturnRemainingAttemptsAfterWrongGuess()
+    {
+        WordChoser mockWordChoser = Substitute.For<WordChoser>(); // Arange
+        mockWordChoser.GetRandomFromDictionary().Returns("MAKERS");
+        Game game = new Game(mockWordChoser);
+        game.GetWordToGuess();
+        game.GuessLetter('B');
+
+        int actual = game.GetRemainingAttempts(); // Act
+        int expected = 9;
+
+        Assert.That(actual, Is.EqualTo(expected)); // Assert
+    }
+
+    [Test]
     public void Game_GuessLetter_ReturnsTrueIfCharInWord()
     {
         WordChoser mockWordChoser = Substitute.For<WordChoser>(); // Arange
