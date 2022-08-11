@@ -7,7 +7,7 @@ namespace WordGame;
 
 public class Game
 { 
-  int attemptsLeft;
+  public int attemptsLeft;
   string wordToGuess;
   List<Char> guessedLetters;
 
