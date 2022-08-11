@@ -23,7 +23,6 @@ public class GameTests
     public void Game_GetRemainingAttempts_ReturnRemainingAttempts()
     {
         WordChoser mockWordChoser = Substitute.For<WordChoser>(); // Arange
-        mockWordChoser.GetRandomFromDictionary().Returns("MAKERS");
         Game game = new Game(mockWordChoser);
 
         int actual = game.GetRemainingAttempts(); // Act
