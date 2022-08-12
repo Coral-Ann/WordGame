@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 namespace WordGame;
 
-
 public class Game
 { 
   public int attemptsLeft;
@@ -23,7 +22,7 @@ public class Game
     StringBuilder hint = new StringBuilder();
     for(int i = 0; i < wordToGuess.Length; i++)
     {
-      if ( i == 0)
+      if ( i == 0 || guessedLetters.Contains(wordToGuess[i]))
       {
         hint.Append(wordToGuess[i]);
       } else {

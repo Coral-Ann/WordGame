@@ -14,9 +14,9 @@ do
     Boolean result = game.GuessLetter(guess);
 
     if (result == true) {
-        System.Console.WriteLine("Right!");
+        System.Console.WriteLine("\nRight!");
     } else {
-        System.Console.WriteLine("Wrong...");
+        System.Console.WriteLine("\nWrong...");
     }
 } 
 while (game.attemptsLeft >= 0);
