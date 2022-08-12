@@ -44,6 +44,7 @@ public class Game
       guessedLetters.Add(letter);
       return true;
     } else if (wordToGuess.Contains(letter) && guessedLetters.Contains(letter)) {
+      guessedLetters.Add(letter);
       return false;
     } else {
       attemptsLeft--;
@@ -53,11 +54,18 @@ public class Game
 
   public bool IsGameLost()
   {
-    if (attemptsLeft == 0)
+    return attemptsLeft <= 0;
+  }
+
+  public bool IsGameWon()
+  {
+    for (int i = 1; i < wordToGuess.Length; i ++)
     {
-      return true;
-    } else {
-      return false;
+      if (!guessedLetters.Contains(wordToGuess[i])) 
+      {
+        return false;
+      }
     }
+    return true;
   }
 }

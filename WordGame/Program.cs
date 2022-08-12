@@ -16,7 +16,19 @@ do
     if (result == true) {
         System.Console.WriteLine("\nRight!");
     } else {
-        System.Console.WriteLine("\nWrong! " + game.GetRemainingAttempts() + " attempts left...");
+        System.Console.WriteLine("\nWrong! " + "\nAttempts left: " + game.GetRemainingAttempts());
+    }
+
+    if (game.IsGameWon()) 
+    {
+        System.Console.WriteLine("Yeaaah! You won!");
+        return;
+    }
+
+    if (game.IsGameLost()) 
+    {
+        System.Console.WriteLine("Oh no! You lost!");
+        return;
     }
 } 
-while (game.IsGameLost() == false);
+while (true);
