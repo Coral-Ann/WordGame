@@ -50,4 +50,14 @@ public class Game
       return false;
     }
   }
+
+  public bool IsGameLost()
+  {
+    if (attemptsLeft == 0)
+    {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

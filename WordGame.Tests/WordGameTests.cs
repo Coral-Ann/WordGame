@@ -20,6 +20,20 @@ public class GameTests
     }
 
     [Test]
+    public void Game_GetWordToGuess_ReturnsRevealedLetter()
+    {
+        WordChoser mockWordChoser = Substitute.For<WordChoser>(); // Arange
+        mockWordChoser.GetRandomFromDictionary().Returns("MAKERS");
+        Game game = new Game(mockWordChoser);
+        game.GuessLetter('A');
+
+        string actual = game.GetWordToGuess(); // Act
+        string expected = "MA____";
+
+        Assert.That(actual, Is.EqualTo(expected)); // Assert
+    }
+
+    [Test]
     public void Game_GetRemainingAttempts_ReturnRemainingAttempts()
     {
         WordChoser mockWordChoser = Substitute.For<WordChoser>(); // Arange
@@ -85,6 +99,39 @@ public class GameTests
 
         bool actual = game.GuessLetter('B'); // Act
         bool expected = false;
+
+        Assert.That(actual, Is.EqualTo(expected)); // Assert    
+    }
+
+    [Test]
+        public void Game_IsGameLost_ReturnsFalse()
+    {
+        WordChoser mockWordChoser = Substitute.For<WordChoser>(); // Arange
+        mockWordChoser.GetRandomFromDictionary().Returns("MAKERS");
+        Game game = new Game(mockWordChoser);
+        game.GetWordToGuess();
+        game.GuessLetter('B');
+
+        bool actual = game.IsGameLost(); // Act
+        bool expected = false;
+
+        Assert.That(actual, Is.EqualTo(expected)); // Assert    
+    }
+
+    [Test]
+        public void Game_IsGameLost_ReturnsTrue()
+    {
+        WordChoser mockWordChoser = Substitute.For<WordChoser>(); // Arange
+        mockWordChoser.GetRandomFromDictionary().Returns("MAKERS");
+        Game game = new Game(mockWordChoser);
+        game.GetWordToGuess();
+        for (int i = 0; i < 10; i++)
+        {
+            game.GuessLetter('B');
+        }
+
+        bool actual = game.IsGameLost(); // Act
+        bool expected = true;
 
         Assert.That(actual, Is.EqualTo(expected)); // Assert 
     }

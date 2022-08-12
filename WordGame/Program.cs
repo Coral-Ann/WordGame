@@ -16,7 +16,7 @@ do
     if (result == true) {
         System.Console.WriteLine("\nRight!");
     } else {
-        System.Console.WriteLine("\nWrong...");
+        System.Console.WriteLine("\nWrong! " + game.GetRemainingAttempts() + " attempts left...");
     }
 } 
-while (game.attemptsLeft >= 0);
+while (game.IsGameLost() == false);
